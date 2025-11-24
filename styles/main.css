@@ -1,0 +1,115 @@
+:root {
+    --font-Lora: "Lora";
+    --font-jeju: "jejumyeongjo";
+    --
+}
+
+#wrap {
+    width:1920px;
+    margin: 0 auto;
+    line-height: 1.2;
+    position: relative;
+}
+header {
+    position: absolute;
+    top: 0; left: 0; z-index:100;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 210px;
+}
+header h1 img {width: 220px; height: 100%;}
+header .gnb {width: 639px;}
+header .gnb .menu_list {
+    display: flex; gap: 60px;
+    font-family: var(--font-Lora);
+
+}
+
+
+#main .sec01_video {
+    position: relative;
+    width:100%; height: 100vh;
+    overflow: hidden;
+}
+.sec01_video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec02_slogan {
+    position: relative;
+    width:100%;
+    height: 100vh;
+    background-image: url(../images/section02_sloganTxt_BG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec02_slogan .sloganBox {
+    display: abo;
+    width: 900px; height:1200px;
+    text-align: center;
+    color: #fff;
+    background-image:url(../images/sloganBox_BG.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+}
+
+.sec02_slogan .sloganBox h2 {
+    font-family: var(--font-jeju);
+    font-size: 2.25rem;
+    color: #FA5100;
+} 
+.sec02_slogan .sloganBox p {
+    font-family: var(--font-jeju);
+    line-height: 1.4;
+    padding: 100px 275px;
+}
+
+/* sec03_mind */
+#main .sec03_mind {
+    padding: 170px 0 210px;
+    position: relative;
+    background-image: url(../images/section03_mind_BG.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#main .sec03_mind h2 {
+    font-size: 2.25rem;
+    font-family: var(--font-jeju);
+    margin-bottom: 40px;
+    color: #fff;
+}
+#main .sec03_mind h3 {
+    font-size: 2.25rem;
+    line-height: 1.4;
+    font-family: var(--font-jeju);
+    margin-bottom: 40px;
+    color: #fff;
+}
+#main .sec03_mind p {
+    line-height: 1.4;
+    font-family: var(--font-jeju);    
+    color: #fff;
+}
+#main .sec03_mind img {
+    display: none; /* 임시 */
+    width: 500px;
+    position: absolute;
+
+
+}
