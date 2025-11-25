@@ -1,11 +1,12 @@
 :root {
     --font-Lora: "Lora";
     --font-jeju: "jejumyeongjo";
-    --
+    --color-point-orange: #FA5100;
+    --color-text-brown: #774535;
+    --color-text-font: #3A0F07;
 }
-
-#wrap {
-    width:1920px;
+wrap {
+    max-width:1920px; width: 100%;
     margin: 0 auto;
     line-height: 1.2;
     position: relative;
@@ -24,12 +25,11 @@ header h1 img {width: 220px; height: 100%;}
 header .gnb {width: 639px;}
 header .gnb .menu_list {
     display: flex; gap: 60px;
-    font-family: var(--font-Lora);
-
 }
+header .gnb .menu_list li a {font-family: var(--font-Lora); letter-spacing: -0.01em;}
+header .right_gnb .menu_right {display:flex; gap: 12px;}
 
-
-#main .sec01_video {
+.sec01_video {
     position: relative;
     width:100%; height: 100vh;
     overflow: hidden;
@@ -39,15 +39,22 @@ header .gnb .menu_list {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
 }
+.hero-logo{
+    position: absolute;
+    left: 50%;  top: calc(100vh - 120px);
+    transform: translateX(-50%);
+    z-index:20;
+}
+.hero-logo img { display: block; width:1175px;}
+
 
 .sec02_slogan {
-    position: relative;
     width:100%;
-    height: 100vh;
+    height: 1500px;
     background-image: url(../images/section02_sloganTxt_BG.jpg);
     background-size: cover;
     background-position: center;
@@ -59,10 +66,9 @@ header .gnb .menu_list {
 }
 
 .sec02_slogan .sloganBox {
-    display: abo;
+    margin: 200px 0 100px 0;
     width: 900px; height:1200px;
     text-align: center;
-    color: #fff;
     background-image:url(../images/sloganBox_BG.png);
     background-size: cover;
     background-position: center;
@@ -70,46 +76,133 @@ header .gnb .menu_list {
 }
 
 .sec02_slogan .sloganBox h2 {
-    font-family: var(--font-jeju);
+    font-family: var(--font-Lora);
     font-size: 2.25rem;
-    color: #FA5100;
+    color: var(--color-point-orange);
+    letter-spacing: 0.02em;
 } 
 .sec02_slogan .sloganBox p {
     font-family: var(--font-jeju);
+    color: var(--color-text-font);
     line-height: 1.4;
-    padding: 100px 275px;
+    letter-spacing: -0.01em;
+    margin: 100px 275px;
+    width: 350px;
 }
 
 /* sec03_mind */
-#main .sec03_mind {
-    padding: 170px 0 210px;
+.sec03_mind {
+    padding: 170px 0 0 210px;
     position: relative;
+    height: 900px;
     background-image: url(../images/section03_mind_BG.jpg);
     background-size: cover;
     background-position: center;
 }
-#main .sec03_mind h2 {
+.sec03_mind h2 {
     font-size: 2.25rem;
-    font-family: var(--font-jeju);
+    font-family: var(--font-Lora);
+    letter-spacing: 0.02em;
     margin-bottom: 40px;
     color: #fff;
 }
-#main .sec03_mind h3 {
+.sec03_mind h3 {
     font-size: 2.25rem;
     line-height: 1.4;
     font-family: var(--font-jeju);
+    letter-spacing: -0.01em;
     margin-bottom: 40px;
     color: #fff;
 }
-#main .sec03_mind p {
+.sec03_mind p {
     line-height: 1.4;
-    font-family: var(--font-jeju);    
+    font-family: var(--font-jeju);  
+    letter-spacing: -0.01em;  
     color: #fff;
 }
-#main .sec03_mind img {
-    display: none; /* 임시 */
-    width: 500px;
+.sec03_mind img {
+    width: 620px;
     position: absolute;
+    right: 220px; top: 220px;
+}
+/* sec04 */
+.sec04_brandStory {
+    position: relative;
+    padding: 120px 210px;
+    width: 120vh;
+}
+.sec04_brandStory .titleBox h2 {
+    font-size: 2.25rem;
+    font-family: var(--font-Lora);
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+    color: var(--color-point-orange);
+}
+.sec04_brandStory .titleBox h3 {
+    font-size: 6rem;
+    font-family: var(--font-Lora);
+    color: var(--color-text-brown);
+    padding-left: 127px;
+}
+.sec04_brandStory .contantBox {
+    margin-top: 130px;
+    width: 662px;
+}
+.sec04_brandStory .contantBox h2 {
+    font-family: var(--font-jeju);
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    color: var(--color-text-brown);
+    margin-bottom: 60px;
+}
+.sec04_brandStory .contantBox p {
+    font-family: var(--font-jeju);
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    color: var(--color-text-brown);
+}
+.sec04_brandStory .contantBox .viewmoreBtn  {width: 60px; height: 60px;}
 
 
+
+/* footer */
+footer {
+    background: #671507;
+    width: 1920px;
+    height: 300px; 
+    display: flex;
+}
+footer .footer-top h1 {width: 220px; height:43px;}
+
+footer .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+footer .footer-info .footer-nav {margin-bottom: 30px; }
+footer .footer-info .footer-nav ul {
+    display: flex; gap:10px;
+}
+footer .footer-info .footer-nav ul li a {color: #fff;}
+.footer-info .footer-cs {
+    padding-left: 60px;
+    line-height: 1.4;
+}
+.footer-info .footer-cs p {font-size:0.75rem;}
+.footer-info .footer-cs p.number {
+    margin-bottom: 10px;
+    font-size: 1.25rem; font-weight: 800;
+}
+.footer-info .footer-cs p {
+    color: #fff;
+    font-size: 0.813rem;
+}
+
+.footer-right .sns {display: flex; gap: 20px; align-items: center;}
+.footer-right .sns .mark img {width: 70px; height: 48px; }
+.footer-right .sns li img {
+    width: 30px; height: 30px;
+    border: 1px solid red;
 }
