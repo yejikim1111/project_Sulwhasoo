@@ -129,7 +129,10 @@ header .right_gnb .menu_right {display:flex; gap: 12px;}
 .sec04_brandStory {
     position: relative;
     padding: 120px 210px;
-    width: 120vh;
+    height: 120vh;
+    background-image: url(../images/section04_brandStory_BG.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .sec04_brandStory .titleBox h2 {
     font-size: 2.25rem;
@@ -161,10 +164,61 @@ header .right_gnb .menu_right {display:flex; gap: 12px;}
     letter-spacing: -0.01em;
     line-height: 1.4;
     color: var(--color-text-brown);
+    margin-bottom: 60px;
 }
 .sec04_brandStory .contantBox .viewmoreBtn  {width: 60px; height: 60px;}
+.sec04_brandStory .img-left {
+    position: absolute;
+    top: 420px;
+    left: 920px;
+    width: 420px;
+}
+.sec04_brandStory .img-right {
+    position: absolute;
+    top: 100px;
+    right: 120px;
+    width: 420px;
+}
+/* sec05 */
+.sec05_newarrivals {
+    height: 900px;
+    background-image: url(../images/section5_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 210px;
+}
+.sec05_newarrivals::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 2555, 0.4);
+    z-index: 0;
+}
+
+.sec05_newarrivals h2 {
+    font-family: var(--font-jeju);
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    color: var(--color-text-brown);
+    margin-bottom: 60px;
+}
+.sec05_newarrivals .new_product-swiper {
+    margin-top: 60px;
+}
+.sec05_newarrivals .new_product-swiper .swiper-slide {
+    width: 320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.new_product-swiper .product {
+    width: 100%; text-align: center;
+}
 
 
+/* 중간 배너 */
 
 /* footer */
 footer {
