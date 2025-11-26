@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="/styles/main.css">
     <!-- swiper cdn css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./scripts/main.js" defer></script>
@@ -87,157 +90,141 @@
             </section>
             <section class="sec05_newarrivals">
                 <h2>NEW PRODUCTS</h2>
-                <div class="new_product-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- slide1 -->
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <a href="#">
-                                    <img src="./images/product/productImg_01.png" alt="자음생클랜징폼">
-                                    <button class="haert_btn" type="button"><img src="" alt=""></button>
-                                    <h3>자음생클랜징폼</h3>
-                                    <p>#자생력 #진생아미노콤플렉스™</p>
-                                    <button class="cart_btn" type="button">68,000</button>
-                                </a>
-                            </div>
+                <div class="new_product-viewport">
+                    <div class="new_product">
+                        <div class="product">
+                            <a href="#">
+                                <img src="./images/product/productImg_01.png" alt="자음생클랜징폼">
+                                <button class="heart_btn" type="button"><img src="./images/iconLogo/icon_heart.svg" alt=""></button>
+                                <h3>자음생클랜징폼</h3>
+                                <p>#자생력 #진생아미노콤플렉스™</p>
+                                <button class="cart_btn" type="button">68,000</button>
+                            </a>
                         </div>
-                        <!-- slide2 -->
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <a href="#">
-                                    <img src="./images/product/productImg_02.png" alt="탄력영양크림 EX">
-                                    <button class="haert_btn" type="button"><img src="" alt=""></button>
-                                    <h3>탄력영양크림 EX</h3>
-                                    <p>#영양보습 #매끈탄탄피부</p>
-                                    <button class="cart_btn" type="button">68,000</button>
-                                </a>
-                            </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="./images/product/productImg_02.png" alt="탄력영양크림 EX">
+                                <button class="heart_btn" type="button"><img src="./images/iconLogo/icon_heart.svg" alt=""></button>
+                                <h3>탄력영양크림 EX</h3>
+                                <p>#영양보습 #매끈탄탄피부</p>
+                                <button class="cart_btn" type="button">68,000</button>
+                            </a>
                         </div>
-                        <!-- slide3 -->
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <a href="#">
-                                    <img src="./images/product/productImg_03.png" alt="자음유액 퍼펙팅 EX">
-                                    <button class="haert_btn" type="button"><img src="" alt=""></button>
-                                    <h3>자음유액 퍼펙팅 EX</h3>
-                                    <p>#11년연속 NO.1 #영양보습케어</p>
-                                    <button class="cart_btn" type="button">78,000</button>
-                                </a>
-                            </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="./images/product/productImg_03.png" alt="자음유액 퍼펙팅 EX">
+                                <button class="heart_btn" type="button"><img src="./images/iconLogo/icon_heart.svg" alt=""></button>
+                                <h3>자음유액 퍼펙팅 EX</h3>
+                                <p>#11년연속 NO.1 #영양보습케어</p>
+                                <button class="cart_btn" type="button">78,000</button>
+                            </a>
                         </div>
-                        <!-- slide4 -->
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <a href="#">
-                                    <img src="./images/product/productImg_04.png" alt="자음수 퍼펙팅 EX">
-                                    <button class="haert_btn" type="button"><img src="" alt=""></button>
-                                    <h3>자음수 퍼펙팅 EX</h3>
-                                    <p>#11년연속 NO.1 #영양보습케어</p>
-                                    <button class="cart_btn" type="button">72,000</button>
-                                </a>
-                            </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="./images/product/productImg_04.png" alt="자음수 퍼펙팅 EX">
+                                <button class="heart_btn" type="button"><img src="./images/iconLogo/icon_heart.svg" alt=""></button>
+                                <h3>자음수 퍼펙팅 EX</h3>
+                                <p>#11년연속 NO.1 #영양보습케어</p>
+                                <button class="cart_btn" type="button">72,000</button>
+                            </a>
                         </div>
-                        <!-- slide5 -->
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <a href="#">
-                                    <img src="./images/product/productImg_05.png" alt="자음생클랜징폼">
-                                    <button class="haert_btn" type="button"><img src="" alt=""></button>
-                                    <h3>진설클렌징폼</h3>
-                                    <p>#진생베리 #스킨케어링 클렌징 폼</p>
-                                    <button class="cart_btn" type="button">90,000</button>
-                                </a>
-                            </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="./images/product/productImg_05.png" alt="자음생클랜징폼">
+                                <button class="heart_btn" type="button"><img src="./images/iconLogo/icon_heart.svg" alt=""></button>
+                                <h3>진설클렌징폼</h3>
+                                <p>#진생베리 #스킨케어링 클렌징 폼</p>
+                                <button class="cart_btn" type="button">90,000</button>
+                            </a>
                         </div>
-                        <!-- slide6 -->
-                        <div class="swiper-slide">
-                            <div class="product">
-                                <a href="#">
-                                    <img src="./images/product/productImg_06.png" alt="자음생클랜징폼">
-                                    <button class="haert_btn" type="button"><img src="" alt=""></button>
-                                    <h3>진설크림 리치</h3>
-                                    <p>#진생베리SR™ #100시간탄력광채</p>
-                                    <button class="cart_btn" type="button">520,000</button>
-                                </a>
+                        <div class="product">
+                            <a href="#">
+                                <img src="./images/product/productImg_06.png" alt="자음생클랜징폼">
+                                <button class="heart_btn" type="button"><img src="./images/iconLogo/icon_heart.svg" alt=""></button>
+                                <h3>진설크림 리치</h3>
+                                <p>#진생베리SR™ #100시간탄력광채</p>
+                                <button class="cart_btn" type="button">520,000</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <img class="sec06_eventbanner" src="./images/section06_imageBanner.jpg" alt="광고 이미지 배너">
+            <section class="sec07_best">
+                <div class="best_inner">
+                    <div class="best_fixed">
+                        <h2>BEST PRODUCTS</h2>
+                        <p>새로운 빛으로 깨어나는 피부의 본연.<br>
+                            설화수의 대표 베스트셀러가 선사하는 생기와 깊은 윤기를 느껴보세요
+                        </p>
+                    </div>
+                    <div class="best_viewport">
+                        <div class="best_list">
+                            <div class="product 01">
+                                <a href="#"><img src="./images/product/best_productimg_01.jpg" alt="윤조에센스"></a>
+                                <p>정체된 피부 흐름을 되살려, 다시 윤빛 도는 피부</p>
+                                <div class="price">
+                                    <p>윤조에센스</p>
+                                    <span>270,000원</span>
+                                </div>
+                            </div>
+                            <div class="product 02">
+                                <a href="#"><img src="./images/product/best_productimg_02.jpg" alt="자음생크림 리치"></a>
+                                <p>60년 인삼과학의 정수 자생력으로 차오른 고밀도 피부</p>
+                                <div class="price">
+                                    <p>자음생크림 리치</p>
+                                    <span>270,000원</span>
+                                </div>
+                            </div>
+                            <div class="product 03">
+                                <a href="#"><img src="./images/product/best_productimg_03.jpg" alt="퍼펙팅 쿠션"></a>
+                                <p>윤, 결, 톤을 한번에 잡아, 타고난 듯 고급스러운 피부</p>
+                                <div class="price">
+                                    <p>퍼펙팅 쿠션</p>
+                                    <span>89,000원</span>
+                                </div>
+                            </div>
+                            <div class="product 04">
+                                <a href="#"><img src="./images/product/best_productimg_04.jpg" alt="순행클렌징폼"></a>
+                                <p>수분 가득 풍성한 거품으로 모공 속까지 딥 클렌징 폼</p>
+                                <div class="price">
+                                    <p>순행클렌징폼</p>
+                                    <span>42,0000원</span>
+                                </div>
+                            </div>
+                            <div class="product 05">
+                                <a href="#"><img src="./images/product/best_productimg_05.jpg" alt="자음생캡슐세럼"></a>
+                                <p>10만* 인삼 캡슐을 담아 5가지 어린 피부 존을 세우다 </p>
+                                <div class="price">
+                                    <p>자음생캡슐세럼</p>
+                                    <span>235,000원</span>
+                                </div>
+                            </div>
+                            <div class="product 06">
+                                <a href="#"><img src="./images/product/best_productimg_06.jpg" alt="본윤 2종 세트"></a>
+                                <p>남성 피부를 총체적으로 케어</p>
+                                <div class="price">
+                                    <p>본윤 2종 세트</p>
+                                    <span>125,000원</span>
+                                </div>
+                            </div>
+                            <div class="product 07">
+                                <a href="#"><img src="./images/product/best_productimg_07.jpg" alt="상백선 크림"></a>
+                                <p>12시간 보습이 지속되는 수분 밀착 선크림 </p>
+                                <div class="price">
+                                    <p>상백선 크림</p>
+                                    <span>90,000원</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
-
-                    
-
             </section>
-            <img src="./images/section06_imageBanner.jpg" alt="광고 이미지 배너">
-            <section class="sec08_best">
-                <h2>BEST PRODUCTS</h2>
-                <p>새로운 빛으로 깨어나는 피부의 본연.<br>
-                    설화수의 대표 베스트셀러가 선사하는 생기와 깊은 윤기를 느껴보세요
-                </p>
-                <div class="scroll">
-                    <div class="product01">
-                        <a href="#"><img src="./images/product/best_productimg_01.jpg" alt="윤조에센스"></a>
-                        <p>정체된 피부 흐름을 되살려, 다시 윤빛 도는 피부</p>
-                        <div class="price">
-                            <p>윤조에센스</p>
-                            <span>270,000원</span>
-                        </div>
-                    </div>
-                    <div class="product02">
-                        <a href="#"><img src="./images/product/best_productimg_02.jpg" alt="자음생크림 리치"></a>
-                        <p>60년 인삼과학의 정수 자생력으로 차오른 고밀도 피부</p>
-                        <div class="price">
-                            <p>자음생크림 리치</p>
-                            <span>270,000원</span>
-                        </div>
-                    </div>
-                    <div class="product03">
-                        <a href="#"><img src="./images/product/best_productimg_03.jpg" alt="퍼펙팅 쿠션"></a>
-                        <p>윤, 결, 톤을 한번에 잡아, 타고난 듯 고급스러운 피부</p>
-                        <div class="price">
-                            <p>퍼펙팅 쿠션</p>
-                            <span>89,000원</span>
-                        </div>
-                    </div>
-                    <div class="product04">
-                        <a href="#"><img src="./images/product/best_productimg_04.jpg" alt="순행클렌징폼"></a>
-                        <p>수분 가득 풍성한 거품으로 모공 속까지 딥 클렌징 폼</p>
-                        <div class="price">
-                            <p>순행클렌징폼</p>
-                            <span>42,0000원</span>
-                        </div>
-                    </div>
-                    <div class="product05">
-                        <a href="#"><img src="./images/product/best_productimg_05.jpg" alt="자음생캡슐세럼"></a>
-                        <p>10만* 인삼 캡슐을 담아 5가지 어린 피부 존을 세우다 </p>
-                        <div class="price">
-                            <p>자음생캡슐세럼</p>
-                            <span>235,000원</span>
-                        </div>
-                    </div>
-                    <div class="product06">
-                        <a href="#"><img src="./images/product/best_productimg_06.jpg" alt="본윤 2종 세트"></a>
-                        <p>남성 피부를 총체적으로 케어</p>
-                        <div class="price">
-                            <p>본윤 2종 세트</p>
-                            <span>125,000원</span>
-                        </div>
-                    </div>
-                    <div class="product07">
-                        <a href="#"><img src="./images/product/best_productimg_07.jpg" alt="상백선 크림"></a>
-                        <p>12시간 보습이 지속되는 수분 밀착 선크림 </p>
-                        <div class="price">
-                            <p>상백선 크림</p>
-                            <span>90,000원</span>
-                        </div>
-                    </div>
-            </section>
-            <section class="sec09_featured">
-                <div class="featuredset_01">
+            <section class="sec08_featured">
+                <div class="featuredset 01">
                     <div class="txt_box">
-                        <h2>ABOUT PRODUCTS</h2>
+                        <h2 class="title">ABOUT PRODUCTS</h2>
                         <h2>윤조에센스 6세대</h2>
                         <p>정체된 피부 흐름을 되살려, 다시 윤빛 도는 피부로. 설화수 No.1 베스트셀러 윤조에센스가 선사하는 깨끗하고 건강한 윤빛 도는 피부를 경험하세요.</p>
                         <div class="viewbuy_btn">
@@ -247,9 +234,9 @@
                     </div>
                     <img src="/images/featuredImg_01.jpg" alt="">
                 </div>
-                <div class="featuredset_02">
+                <div class="featuredset 02">
                     <div class="txt_box">
-                        <h2>ABOUT PRODUCTS</h2>
+                        <h2 class="title">ABOUT PRODUCTS</h2>
                         <h2>자음생크림</h2>
                         <p>60년간 끊임없는 진화를 거듭해온 설화수의 대표 안티에이징 인삼크림, 자음생크림. 한결같이 이어지는 탄탄한 피부를 위해 자생력으로 차오르는 힘을 만드세요.</p>
                         <div class="viewbuy_btn">
@@ -269,7 +256,7 @@
         </main>
         <footer>
             <div class="footer-top">
-                <h1 class="fofter-logo">
+                <h1 class="footer-logo">
                     <a href="#"><img src="./images/iconLogo/logo.svg" alt="설화수"></a>
                 </h1>
                 <div class="footer-info">
